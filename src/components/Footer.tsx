@@ -48,8 +48,20 @@ export default function Footer({ activeSection }: FooterProps) {
               onClick={(e) => handleLinkClick(e, "#hero")}
               className="flex items-center gap-2 group mb-4"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-violet-600 to-fuchsia-600 flex items-center justify-center text-white font-extrabold text-xl shadow-lg shadow-violet-500/20">
-                <span>D</span>
+              <div className="w-20 h-20">
+                {/* Light Mode Logo */}
+                <img
+                  src="/assets/logo.png"
+                  alt="Logo"
+                  className="block dark:hidden w-full h-full object-contain"
+                />
+
+                {/* Dark Mode Logo */}
+                <img
+                  src="/assets/logo-light.png"
+                  alt="Logo"
+                  className="hidden dark:block w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100">
                 {PERSONAL_INFO.name}
